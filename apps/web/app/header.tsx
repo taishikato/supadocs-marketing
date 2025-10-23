@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { Sparkles } from "lucide-react";
+
 import { ModeToggle } from "@/components/mode-toggle";
 
 export function Header() {
@@ -16,8 +18,9 @@ export function Header() {
         className="mx-auto flex items-center justify-between px-5 container"
       >
         <div className="flex items-center gap-x-12">
-          <Link href="/" className="font-semibold">
-            Supadocs starter pack
+          <Link href="/" className="font-semibold flex items-center gap-x-2">
+            <Sparkles className="size-4" />
+            Supadocs
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -42,8 +45,12 @@ export function Header() {
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background/80 backdrop-blur-sm px-5 pt-4 pb-5 sm:max-w-sm sm:ring-1 sm:ring-border">
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5 font-semibold">
-              Supadocs starter pack
+            <Link
+              href="/"
+              className="-m-1.5 p-1.5 font-semibold flex items-center gap-x-2"
+            >
+              <Sparkles className="size-4" />
+              Supadocs
             </Link>
             <button
               type="button"
