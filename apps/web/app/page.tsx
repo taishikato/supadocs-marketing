@@ -1,3 +1,6 @@
+import Link from "next/link";
+
+import { Button } from "@workspace/ui/components/button";
 import { Header } from "./header";
 
 export default function Page() {
@@ -10,7 +13,7 @@ export default function Page() {
           <br />
           out of the box.
         </h1>
-        <div className="mt-8 text-secondary-foreground/80 text-sm md:text-base space-y-1">
+        <div className="mt-6 text-secondary-foreground/80 text-sm md:text-base space-y-1">
           <div>
             Supadocs is your AI-friendly docs starter built with Next.js,
             Supabase, and OpenAI.
@@ -25,6 +28,17 @@ export default function Page() {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="mt-6">
+          <Button
+            asChild
+            size="lg"
+            className="shadow-md rounded-none transition-colors bg-purple-500 hover:bg-purple-400 text-white"
+          >
+            <Link href="/docs/nesting/how-to-use-supadocs">
+              Launch your AI docs site
+            </Link>
+          </Button>
         </div>
       </main>
       <footer className="py-6 text-center text-sm text-muted-foreground">
