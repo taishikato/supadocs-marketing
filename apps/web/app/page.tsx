@@ -34,6 +34,12 @@ export default function Page() {
           </ul>
         </div>
       </main>
+      <footer className="py-6 text-center text-sm text-muted-foreground">
+        made by{" "}
+        <a target="_blank" href="https://x.com/taishik_" className="underline">
+          taishik_
+        </a>
+      </footer>
     </>
   );
 }
