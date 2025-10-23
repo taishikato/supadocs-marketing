@@ -61,11 +61,32 @@ export default function Page() {
           </Button>
         </div>
 
-        <div>
-          <h2 className="underline">AI Chat</h2>
-        </div>
+        <ul className="mt-12 space-y-5">
+          <li>
+            <h2 className="underline">AI Chat</h2>
+            <video
+              src="/supadocs-chat.mp4"
+              className="mt-3 w-full max-w-2xl"
+              autoPlay
+              playsInline
+              muted
+              loop
+            />
+          </li>
+          <li>
+            <h2 className="underline">Export for LLMs</h2>
+            <video
+              src="/supadocs-extra.mp4"
+              className="mt-4 w-full max-w-2xl"
+              autoPlay
+              playsInline
+              muted
+              loop
+            />
+          </li>
+        </ul>
       </main>
-      <footer className="py-6 text-center text-sm text-muted-foreground">
+      <footer className="py-6 text-center text-sm text-muted-foreground mt-20">
         made by{" "}
         <a target="_blank" href="https://x.com/taishik_" className="underline">
           taishik_
