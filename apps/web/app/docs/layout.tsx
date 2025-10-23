@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Geist } from "next/font/google";
 
 import { AppSidebar } from "@/components/app-sidebar";
 import { ChatModal } from "@/components/chat-modal";
@@ -10,9 +11,14 @@ import {
   SidebarTrigger,
 } from "@workspace/ui/components/sidebar";
 
+const fontSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
 export default function DocsLayout({ children }: { children: ReactNode }) {
   return (
-    <>
+    <div className={fontSans.className}>
       <SidebarProvider>
         <AppSidebar />
         <SidebarInset>
@@ -38,6 +44,6 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
           }
         />
       </div>
-    </>
+    </div>
   );
 }
