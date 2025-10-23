@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Sparkles } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -27,9 +28,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
-              <Link className="flex flex-row items-center gap-3" href="/">
-                <span className="cursor-pointer rounded-md px-2 font-semibold text-lg hover:bg-muted">
+            <SidebarMenuButton asChild>
+              <Link className="flex flex-row items-center gap-x-2" href="/">
+                <Sparkles className="size-4" />
+                <span className="cursor-pointer rounded-md font-semibold text-base hover:bg-muted">
                   Supadocs
                 </span>
               </Link>
