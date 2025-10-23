@@ -1,7 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Button } from "@workspace/ui/components/button";
 import { Header } from "./header";
+
+const pageDescription =
+  "Launch a technical documentation site with AI chat, Markdown utilities, and a ready-to-use Next.js stack.";
+
+export const metadata: Metadata = {
+  description: pageDescription,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    description: pageDescription,
+    url: "/",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    description: pageDescription,
+  },
+};
 
 export default function Page() {
   return (
@@ -39,6 +59,10 @@ export default function Page() {
               Launch your AI docs site
             </Link>
           </Button>
+        </div>
+
+        <div>
+          <h2 className="underline">AI Chat</h2>
         </div>
       </main>
       <footer className="py-6 text-center text-sm text-muted-foreground">
