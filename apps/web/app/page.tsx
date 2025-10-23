@@ -1,37 +1,30 @@
-import Link from "next/link";
 import { Header } from "./header";
 
 export default function Page() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
-        <h1 className="text-4xl font-semibold">Hey, welcome to Supadocs!</h1>
-        <div className="mt-6 text-lg sm:text-xl text-muted-foreground">
-          <ul className="list-disc list-inside space-y-1">
-            <li>
-              To enable AI Chat, check{" "}
-              <Link
-                className="font-semibold text-secondary-foreground underline"
-                href="https://github.com/taishikato/supadocs-starter-template/blob/main/README.md#usage"
-                rel="noreferrer"
-                target="_blank"
-              >
-                README.md
-              </Link>{" "}
-              for the setup guide - it's supa easy!
-            </li>
-            <li>
-              Open{" "}
-              <Link
-                className="font-semibold text-secondary-foreground underline"
-                href="/docs"
-              >
-                /docs
-              </Link>{" "}
-              to see the documentation.
-            </li>
-          </ul>
+      <main className="flex min-h-screen px-6 flex-col container mx-auto mt-8">
+        <h1 className="text-2xl md:text-3xl font-semibold border-l-3 border-purple-400 dark:border-purple-500 pl-3">
+          A Next.js template for technical docs with AI chat,
+          <br />
+          out of the box.
+        </h1>
+        <div className="mt-8 text-secondary-foreground/80 text-sm md:text-base space-y-1">
+          <div>
+            Supadocs is your AI-friendly docs starter built with Next.js,
+            Supabase, and OpenAI.
+          </div>
+          <div>
+            Out of the box you get:
+            <ul className="list-disc list-inside space-y-1">
+              <li>a built-in RAG-powered chat experience</li>
+              <li>
+                handy extras like copy article as Markdown and download Markdown
+                file
+              </li>
+            </ul>
+          </div>
         </div>
       </main>
       <footer className="py-6 text-center text-sm text-muted-foreground">
