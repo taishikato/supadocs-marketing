@@ -8,6 +8,8 @@ import { Sparkles } from "lucide-react";
 
 import { ModeToggle } from "@/components/mode-toggle";
 
+const navigation = [{ name: "Documentation", href: "/docs" }];
+
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -22,6 +24,17 @@ export function Header() {
             <Sparkles className="size-4" />
             Supadocs
           </Link>
+          <div className="hidden lg:flex lg:gap-x-12">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-sm/6 font-semibold"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -63,6 +76,17 @@ export function Header() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-border">
+              <div className="space-y-2 py-6">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
               <div className="py-6">
                 <ModeToggle />
               </div>
