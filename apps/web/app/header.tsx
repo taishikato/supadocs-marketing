@@ -4,7 +4,8 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { Sparkles } from "lucide-react";
+import { Github, Sparkles } from "lucide-react";
+import { Button } from "@workspace/ui/components/button";
 
 import { ModeToggle } from "@/components/mode-toggle";
 
@@ -46,7 +47,17 @@ export function Header() {
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex items-center gap-x-2">
+          <Button asChild variant="secondary">
+            <Link
+              href="https://github.com/taishikato/supadocs-starter-template"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Github className="size-4" />
+              GitHub
+            </Link>
+          </Button>
           <ModeToggle />
         </div>
       </nav>
@@ -88,7 +99,23 @@ export function Header() {
                 ))}
               </div>
               <div className="py-6">
-                <ModeToggle />
+                <ul className="space-y-2">
+                  <li>
+                    <Button asChild variant="secondary">
+                      <Link
+                        href="https://github.com/taishikato/supadocs-starter-template"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Github className="size-4" />
+                        GitHub
+                      </Link>
+                    </Button>
+                  </li>
+                  <li>
+                    <ModeToggle />
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
