@@ -50,7 +50,7 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-x-2">
           <Button asChild variant="secondary">
             <Link
-              href="https://github.com/taishikato/supadocs-starter-template"
+              href="https://github.com/taishikato/supadocs"
               target="_blank"
               rel="noreferrer"
             >
@@ -103,7 +103,7 @@ export function Header() {
                   <li>
                     <Button asChild variant="secondary">
                       <Link
-                        href="https://github.com/taishikato/supadocs-starter-template"
+                        href="https://github.com/taishikato/supadocs"
                         target="_blank"
                         rel="noreferrer"
                       >
