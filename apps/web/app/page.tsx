@@ -88,7 +88,12 @@ export default function Page() {
       </main>
       <footer className="py-6 text-center text-sm text-muted-foreground mt-20">
         made by{" "}
-        <a target="_blank" href="https://x.com/taishik_" className="underline">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://x.com/taishik_"
+          className="underline"
+        >
           taishik_
         </a>
       </footer>
