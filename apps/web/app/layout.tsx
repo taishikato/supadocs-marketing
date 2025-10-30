@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "@workspace/ui/globals.css";
 import { Providers } from "@/components/providers";
@@ -58,6 +59,7 @@ export default function RootLayout({
         >
           <Providers>{children}</Providers>
         </ThemeProvider>
+        <GoogleAnalytics gaId="G-QYZPGB4S4W" />
       </body>
     </html>
   );
