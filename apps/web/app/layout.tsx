@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 import "@workspace/ui/globals.css";
 import { Providers } from "@/components/providers";
@@ -46,6 +47,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${fontMono.className} font-sans antialiased `}>
+        <Script
+          src="https://plausible-analytics.up.railway.app/js/script.js"
+          data-domain="supadocs-ai.vercel.app"
+          strategy="afterInteractive"
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
